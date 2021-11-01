@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.example"
-version = "0.0.1-SNAPSHOT"
+version = ""
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
@@ -16,6 +16,8 @@ repositories {
 }
 
 dependencies {
+  implementation("com.google.cloud:google-cloud-translate:2.1.7")
+  implementation("com.google.api-client:google-api-client:1.32.2")
   implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
