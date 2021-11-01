@@ -1,4 +1,4 @@
-package com.example.tranaslatoinator
+package com.example.translatoinator
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
