@@ -4,7 +4,7 @@ import com.google.cloud.translate.Language
 
 interface TranslatorAdapter {
 
-  fun getLanguageCodes(): List<Language>
+  fun getLanguages(): List<Language>
 
   fun translate(word: String, code: String): String
 }

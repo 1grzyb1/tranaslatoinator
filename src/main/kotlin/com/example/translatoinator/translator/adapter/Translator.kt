@@ -10,7 +10,7 @@ import org.springframework.cache.annotation.Cacheable
 open class Translator(private val translator: Translate) : TranslatorAdapter {
 
   @Cacheable("languages")
-  override fun getLanguageCodes(): List<Language> {
+  override fun getLanguages(): List<Language> {
     return translator
       .listSupportedLanguages(LanguageListOption.targetLanguage("PL"))
   }

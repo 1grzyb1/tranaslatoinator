@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service
 @Service
 internal class WordTranslationService(private val translatorAdapter: TranslatorAdapter) {
 
-  fun transform(codes: List<Language>, word: String) : String {
+  fun transform(codes: List<Language>, word: String, inputLanguageCode: String) : String {
     var transformingWord = word
     codes.forEach {
       transformingWord = translatorAdapter.translate(transformingWord, it.code)
     }
-    return translatorAdapter.translate(transformingWord, "PL")
+    return translatorAdapter.translate(transformingWord, inputLanguageCode)
   }
 }

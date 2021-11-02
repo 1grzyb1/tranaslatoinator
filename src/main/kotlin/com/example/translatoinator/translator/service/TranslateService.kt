@@ -13,8 +13,15 @@ internal class TranslateService(
 ) : TranslateUseCase {
 
   override fun translate(translateRequest: RandomTranslateRequest): RandomTranslateResponse {
-    val languages = getRandomLanguages.getRandomLanguages(translateRequest.repeat)
-    val transformedWord = wordTranslationService.transform(languages, translateRequest.word)
+    val languages = getRandomLanguages.getRandomLanguages(
+      translateRequest.repeat,
+      translateRequest.inputLanguageCode
+    )
+    val transformedWord = wordTranslationService.transform(
+      languages,
+      translateRequest.word,
+      translateRequest.inputLanguageCode
+    )
     return RandomTranslateResponse(transformedWord, languages.map(Language::getName))
   }
 }
