@@ -12,7 +12,7 @@ open class Translator(private val translator: Translate) : TranslatorAdapter {
   @Cacheable("languages")
   override fun getLanguages(): List<Language> {
     return translator
-      .listSupportedLanguages(LanguageListOption.targetLanguage("PL"))
+      .listSupportedLanguages(LanguageListOption.targetLanguage("en"))
   }
 
   override fun translate(word: String, code: String): String {
