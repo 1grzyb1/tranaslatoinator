@@ -3,7 +3,6 @@
 App to randomly translate word through different languages
 
 ## API
-``URL: http://grzybek.snet.ovh:8080``
 
 ### POST /randomTranslate
 ```
